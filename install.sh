@@ -37,6 +37,6 @@ mv composer.phar /usr/bin/composer
 
 composer global require laravel/installer
 
-export PATH="~/.composer/vendor/bin:$PATH" 
+export PATH="~/.config/composer/vendor/bin:$PATH" 
 
 laravel new test

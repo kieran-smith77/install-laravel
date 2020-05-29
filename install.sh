@@ -29,7 +29,7 @@ fi
 php composer-setup.php --quiet
 RESULT=$?
 rm composer-setup.php
-mv composer.phar /usr/local/bin/composer
+mv composer.phar /usr/bin/composer
 
 ######
 # Install Laravel

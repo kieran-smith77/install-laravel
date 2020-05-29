@@ -26,12 +26,10 @@ then
     rm composer-setup.php
     exit 1
 fi
-
 php composer-setup.php --quiet
 RESULT=$?
 rm composer-setup.php
-
-$HOME/.config/composer/vendor/bin
+mv composer.phar /usr/local/bin/composer
 
 ######
 # Install Laravel

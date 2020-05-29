@@ -3,7 +3,7 @@
 ######
 
 yum update -y
-amazon-linux-extras install -y lamp-mariadb-php php
+amazon-linux-extras install -y php
 
 yum install -y httpd mariadb-server
 yum install -y php-bcmath php-ctype php-fileinfo php-json php-mbstring php-openssl php-pdo php-tokenizer php-xml

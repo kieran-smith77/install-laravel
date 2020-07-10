@@ -3,13 +3,15 @@
 ######
 # Install LAMP Stack
 ######
+sudo apt-get update
+sudo apt-get install -y software-properties-common
+sudo add-apt-repository -y ppa:ondrej/php
+sudo apt-get update -y
+sudo apt install -y apache2 mysql-server php7.4 php7.4-mysql libapache2-mod-php php7.4-cli
+sudo apt install -y git zip php7.4-zip php7.4-bcmath php7.4-json php7.4-mbstring php7.4-common php7.4-tokenizer php7.4-xml
 
-apt update -y
-apt install -y apache2 mysql-server php php-mysql libapache2-mod-php php-cli
-apt install -y git zip php-bcmath php-ctype php-zip php-fileinfo php-json php-mbstring php-openssl php-pdo php-tokenizer php-xml
-
-systemctl enable apache2
-systemctl start apache2
+sudo systemctl enable apache2
+sudo systemctl start apache2
 
 ######
 # Install Composer
@@ -36,6 +38,6 @@ mv composer.phar /usr/bin/composer
 
 composer global require laravel/installer
 
-export PATH="~/.composer/vendor/bin:$PATH" 
+export PATH="~/.composer/vendor/bin:$PATH"
 
 laravel new test

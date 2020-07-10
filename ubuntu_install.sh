@@ -30,7 +30,7 @@ fi
 php composer-setup.php --quiet
 RESULT=$?
 rm composer-setup.php
-mv composer.phar /usr/bin/composer
+sudo mv composer.phar /usr/bin/composer
 
 ######
 # Install Laravel
@@ -38,6 +38,6 @@ mv composer.phar /usr/bin/composer
 
 composer global require laravel/installer
 
-export PATH="~/.composer/vendor/bin:$PATH"
+export PATH="~/.config/composer/vendor/bin:$PATH"
 
 laravel new test

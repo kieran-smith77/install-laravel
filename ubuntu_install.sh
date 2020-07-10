@@ -6,7 +6,7 @@
 
 apt update -y
 apt install -y apache2 mysql-server php php-mysql libapache2-mod-php php-cli
-apt install -y git php-bcmath php-ctype php-fileinfo php-json php-mbstring php-openssl php-pdo php-tokenizer php-xml
+apt install -y git zip php-bcmath php-ctype php-fileinfo php-json php-mbstring php-openssl php-pdo php-tokenizer php-xml
 
 systemctl enable apache2
 systemctl start apache2
@@ -36,6 +36,6 @@ mv composer.phar /usr/bin/composer
 
 composer global require laravel/installer
 
-export PATH="~/.config/composer/vendor/bin:$PATH" 
+export PATH="~/.composer/vendor/bin:$PATH" 
 
 laravel new test
